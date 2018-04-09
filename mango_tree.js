@@ -2,7 +2,7 @@
 
 // release 0
 
-class MangoTree {
+class FruitsTree {
 
   // Initialize a new MangoTree
   constructor(umur,tinggi,maxBuah) {
@@ -100,7 +100,7 @@ class Mango {
 
 
    //driver code untuk release 0
-   let mangoTree = new MangoTree()
+   let mangoTree = new FruitsTree()
    do {
      mangoTree.grow();
      mangoTree.produceMangoes();
@@ -109,9 +109,20 @@ class Mango {
    } while (mangoTree.healthyStatus !== false && mangoTree.age<20)
   
 
-// Release 1
-// class AppleTree {}
-// class Apple {}
+//Release 1
+class AppleTree extends FruitsTree {
+  constructor(){
+    this.name='Apples'
+    this._maxUmur = 40
+  }
+  randomGrowth(){
+    return Math.floor(Math.random()*2)
+  }
+  produceApple(){
+    return Math.floor(Math.random()*200)
+  }
+}
+class Apple {}
 
 // Release 2
 class FruitTree {}
