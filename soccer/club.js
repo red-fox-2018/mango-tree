@@ -10,7 +10,6 @@ class Club{
 
   addPlayer(player){
         player.currentClub = this.name
-        console.log(player)
         this.player.push(player)
         return this.player
   }
@@ -21,7 +20,8 @@ class Club{
                   return
               }else{
                   if(this.budgetTransfer < player.transferFee){
-                        console.log(`Budget no sufficient to buy ${player.playerName}. Your club need extra money for (${player.transferFee}-${this.budgetTransfer})`)
+                    let extraMoney = player.transferFee - this.budgetTransfer
+                    console.log(`Budget no sufficient to buy ${player.playerName}. Your club need extra money for $${extraMoney} to buy this player`)
                   }else{
                         this.addPlayer(player)
                         this.budgetTransfer = this.budgetTransfer - player.transferFee
@@ -32,13 +32,13 @@ class Club{
                           }
                         })
                         team.player.splice(deleteIndex,1)
-                        console.log(deleteIndex)
                         console.log(`You buy ${player.playerName} with transfer fee ${player.transferFee} , remaining budget: ${this.budgetTransfer}`)
                   }
               }
         }else{
           if(this.budgetTransfer < player.transferFee){
-                console.log(`Budget no sufficient to buy ${player.playerName}. Your club need extra money for (${player.transferFee}-${this.budgetTransfer})`)
+                let extraMoney = player.transferFee - this.budgetTransfer
+                  console.log(`Budget no sufficient to buy ${player.playerName}. Your club need extra money for $${extraMoney} to buy this player`)
           }else{
             this.addPlayer(player)
             this.budgetTransfer = this.budgetTransfer - player.transferFee
