@@ -1,4 +1,6 @@
 
+const Fruit = require('./Fruit');
+
 class FruitTree {
   /**
    * 
@@ -42,7 +44,7 @@ class FruitTree {
     // @ TODO pohon dapat berbuah ketika mature age ??
     // let pm = this.produceMangoes();
     if (this._age >= this._matureAge) {
-      this.produceMangoes();
+      this.produceFruits();
     }
 
     // pohon mati pada umur tertentu
@@ -50,11 +52,11 @@ class FruitTree {
       this._healtyStatus = false;
     }
   }
-  produceMangoes() { // @ TODO
+  produceFruits() { // @ TODO
     let cruFruit = [];
     let total = this._randomNumer(15, 5);
     for (let i = 0; i < total; i++) {
-      let mango = new Apple();
+      let mango = new Fruit();
       cruFruit.push(mango);
     }
     // console.log(cruFruit)
