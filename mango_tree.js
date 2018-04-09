@@ -259,7 +259,7 @@ class FruitTree {
   // Get some fruits
   harvest() {
     for (let i = 0; i < this._hervested; i++) {
-      let temp = new Apple();
+      let temp = new Fruit();
       temp.quality()
       if (temp.good > 0) {
         this.goodFruits++
