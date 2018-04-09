@@ -1,5 +1,6 @@
 "use strict"
 
+const FruitTree = require('./FruitTree');
 const Apple = require('./Apple');
 
 class AppleTree {

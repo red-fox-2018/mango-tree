@@ -1,7 +1,9 @@
 
-class Mango {
+const Fruit = require('./Fruit');
+
+class Mango extends Fruit {
   constructor() {
-    this._quality = Math.round(Math.random()) == 1 ? 'good' : 'bad';
+    super();
   }
 }
 
