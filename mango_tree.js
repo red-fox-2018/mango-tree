@@ -226,8 +226,9 @@ class FruitTree {
   constructor(maxAge, maxFruits, minGrowth, maxGrowth) {
     this._age = 0;
     this._height = 0;
-    this._harvested = null;
+    this._harvested = 0;
     this._healthStatus = true;
+    this._fruits = 0
     this._maxAge = maxAge;
     this._maxFruits = maxFruits;
     this._minGrowth = minGrowth;
