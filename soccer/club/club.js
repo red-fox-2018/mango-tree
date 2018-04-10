@@ -21,20 +21,8 @@ class Club {
         this.budgetTransfer -= objPlayer.transferFee;
 
         if( objClub !== null){
-          let playersClub = objClub.players //array of object
-          let idxPlayer;
-          for(var i=0; i<playersClub.length; i++){
-            if(playersClub[i].playerName === objPlayer.playerName){
-              idxPlayer = i
-            }
-          }
-          playersClub.splice(idxPlayer,1)
-          // // console.log(playersClub);
-          // function playerName(dataPlayer){
-          //   dataPlayer.playerName === objPlayer.playerName
-          // }
-          // console.log( '++++>', objPlayer);
-          // console.log('======>', playersClub);
+          let idxPlayer = objClub.players.indexOf(objPlayer)
+          objClub.players.splice(idxPlayer,1)
         }
 
         console.log(`You buy ${objPlayer.playerName} with transfer fee $${objPlayer.transferFee}, remaining budget: $${this.budgetTransfer}`);

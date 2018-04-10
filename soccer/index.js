@@ -32,8 +32,7 @@ console.log(cristianoRonaldo);
 
 
 //--------------------CLUB_RELEASE 1----------
-let realMadrid = new RealMadrid(); //10milyar
-// let realMadrid = new RealMadrid();
+let realMadrid = new RealMadrid();
 realMadrid.addPlayer(cristianoRonaldo);
 console.log(realMadrid);
 // EXPECTED OUTPUT:
@@ -52,8 +51,7 @@ console.log(realMadrid);
   //      transferFee: 94000000,
   //      currentClub: 'Real Madrid F.C.' } ] }
 
-let barca = new Barcelona(); //20juta
-// let barca = new Barcelona();
+let barca = new Barcelona();
 barca.addPlayer(gerardPique);
 barca.addPlayer(luisSuarez);
 console.log(barca);
@@ -80,8 +78,7 @@ console.log(barca);
   //      transferFee: 73000000,
   //      currentClub: 'F.C. Barcelona' } ] }
 
-let liverpool = new Liverpool(); //50juta
-// let liverpool = new Liverpool();
+let liverpool = new Liverpool();
 console.log(liverpool);
 //EXPECTED OUTPUT:
   // Liverpool {
@@ -92,8 +89,7 @@ console.log(liverpool);
   //   budgetTransfer: 50000000,
   //   players: [] }
 
-let arsenal = new Arsenal(); //35juta
-// let arsenal = new Arsenal()
+let arsenal = new Arsenal();
 console.log(arsenal);
 //EXPECTED OUTPUT:
   // Arsenal {
@@ -105,7 +101,7 @@ console.log(arsenal);
   //   players: [] }
 
 //----------------------LEAGUE_RELEASE 2----------------------------
-let premierLeague = new PremierLeague('United Kingdom', 'Richard Scudamore');
+let premierLeague = new PremierLeague();
 console.log(premierLeague);
 //EXPECTED OUTPUT:
   // PremierLeague {
@@ -113,7 +109,7 @@ console.log(premierLeague);
   //   ceo: 'Richard Scudamore',
   //   clubs: [] }
 
-let laliga = new LaLiga('Spain', 'Javier Gomez');
+let laliga = new LaLiga();
 console.log(laliga); //LaLiga { country: 'Spain', ceo: 'Javier Gomez', clubs: [] }
 
 premierLeague.addClub(liverpool);

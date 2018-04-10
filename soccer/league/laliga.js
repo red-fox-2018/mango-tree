@@ -1,8 +1,8 @@
 const League = require('./league');
 
 class LaLiga extends League {
-  constructor(country, ceo){
-    super(country, ceo)
+  constructor(){
+    super('Spain', 'Javier Gomez')
   }
 }
 

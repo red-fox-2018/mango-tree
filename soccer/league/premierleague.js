@@ -1,8 +1,8 @@
 const League = require('./league');
 
 class PremierLeague extends League {
-  constructor(country, ceo){
-    super(country, ceo)
+  constructor(){
+    super('United Kingdom', 'Richard Scudamore')
   }
 }
 
