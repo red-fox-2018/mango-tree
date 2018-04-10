@@ -14,25 +14,19 @@ class Club {
   }
 
   buyPlayer(objPlayer, objClub) {
-    // console.log(objPlayer);
     if(objClub === null || objPlayer.currentClub === objClub.name) {
-      // console.log('-masuk1-');
       if(this.budgetTransfer >= objPlayer.transferFee) {
-        // console.log('--masuk2--');
-        // console.log(objPlayer.playerName);
         this.budgetTransfer -= objPlayer.transferFee
         objPlayer.currentClub = this.name
         this.players.push(objPlayer)
         if(objClub !== null) {
-          for(var i = 0; i < objClub.players.length; i++) {
-            if(objPlayer.playerName === objClub.players[i].playerName) {
-              objClub.players.splice(i, 1)
-            }
-          }
+          var index = objClub.players.indexOf(objPlayer)
+          objClub.players.splice(index, 1)
         }
         console.log(`You buy ${objPlayer.playerName} with transfer fee ${objPlayer.transferFee}, remaining budget: ${this.budgetTransfer}`)
       } else {
-        console.log(`Budget nor sufficient to buy ${objPlayer.playerName}`)
+        var extraMoney = objPlayer.transferFee - this.budgetTransfer
+        console.log(`Budget not sufficient to buy ${objPlayer.playerName}. Your club need extra money for ${extraMoney} to buy this player`)
       }
     } else {
       console.log(`There is no Player with name  ${objPlayer.playerName} in ${objClub.name}`);
