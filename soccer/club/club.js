@@ -29,6 +29,12 @@ class Club {
             }
           }
           playersClub.splice(idxPlayer,1)
+          // // console.log(playersClub);
+          // function playerName(dataPlayer){
+          //   dataPlayer.playerName === objPlayer.playerName
+          // }
+          // console.log( '++++>', objPlayer);
+          // console.log('======>', playersClub);
         }
 
         console.log(`You buy ${objPlayer.playerName} with transfer fee $${objPlayer.transferFee}, remaining budget: $${this.budgetTransfer}`);
@@ -42,31 +48,5 @@ class Club {
   }
 }
 
-class RealMadrid extends Club {
-  constructor(){
-    super('Real Madrid F.C.', 'Santiago Bernabéu', 'Madrid', 'Zinedine Zidane', 10000000000)
-  }
-}
 
-class Barcelona extends Club {
-  constructor(){
-    super('F.C. Barcelona', 'Camp Nou', 'Barcelona', 'Ernesto Valverde', 20000000)
-  }
-}
-
-class Liverpool extends Club {
-  constructor(){
-    super('Liverpool F.C.', 'Anfield', 'Liverpool', 'Jürgen Klopp', 50000000)
-  }
-}
-
-class Arsenal extends Club {
-  constructor(){
-    super('Arsenal F.C.', 'Emirates Stadium', 'London', 'Arsène Wenger', 35000000)
-  }
-}
-//
-// let barca = new Club('Barcelona', 'GBK', 'Jakarta', 'Gatau Siapa', 50000)
-// console.log(barca);
-
-module.exports = {RealMadrid, Barcelona, Liverpool, Arsenal};
+module.exports = Club;

@@ -22,16 +22,5 @@ class League {
   }
 }
 
-class PremierLeague extends League {
-  constructor(country, ceo){
-    super(country, ceo)
-  }
-}
 
-class LaLiga extends League {
-  constructor(country, ceo){
-    super(country, ceo)
-  }
-}
-
-module.exports = {PremierLeague, LaLiga};
+module.exports = League;

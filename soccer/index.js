@@ -1,11 +1,11 @@
 //your code here
 const Player = require('./player.js');
-const RealMadrid = require('./club.js').RealMadrid;
-const Barcelona = require('./club.js').Barcelona;
-const Liverpool = require('./club.js').Liverpool;
-const Arsenal = require('./club.js').Arsenal;
-const PremierLeague = require('./league.js').PremierLeague;
-const LaLiga = require('./league.js').LaLiga;
+const RealMadrid = require('./club/realMadrid.js');
+const Barcelona = require('./club/barcelona.js');
+const Liverpool = require('./club/liverpool.js');
+const Arsenal = require('./club/arsenal.js');
+const PremierLeague = require('./league/premierleague.js');
+const LaLiga = require('./league/laliga.js');
 //DRIVER CODE
 //----------------PLAYER_RELEASE 0--------
 let cristianoRonaldo = new Player('Cristiano Ronaldo', '1.87m', 'Striker', 'Portugal', 94000000);
