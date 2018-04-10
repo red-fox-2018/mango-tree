@@ -5,7 +5,7 @@
 
 // Club
 class Club {
-  constructor(name, stadium, location, manager, budgetTransfer, players) {
+  constructor(name, stadium, location, manager, budgetTransfer) {
     this.name = name;
     this.stadium = stadium;
     this.location = location;
