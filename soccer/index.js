@@ -4,14 +4,17 @@
 /*jshint -W030*/
 
 //your code here
-const Player = require ('./player.js');
-const RealMadrid = require ('./club.js').RealMadrid;
-const Barcelona = require ('./club.js').Barcelona;
-const Liverpool= require ('./club.js').Liverpool;
-const Arsenal = require ('./club.js').Arsenal;
-const PremierLeague = require('./league.js').PremierLeague;
-const LaLiga = require('./league.js').LaLiga;
-
+const Player = require('./player.js');
+const {
+  RealMadrid,
+  Barcelona,
+  Liverpool,
+  Arsenal
+} = require('./club.js');
+const {
+  PremierLeague,
+  LaLiga
+} = require('./league.js');
 
 //DRIVER CODE
 //----------------PLAYER_RELEASE 0--------
